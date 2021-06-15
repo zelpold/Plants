@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>100</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>100</width>
+    <height>100</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>300</width>
+    <height>100</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Form{background:transparent;}</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>300</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#widget{background-color: rgba(0,0,0,0)}
+#widget::hover{background-color:rgba(0, 170, 0, 0);}
+#widget::pressed{
+background-color:rgba(0, 170, 127,0.8);
+}
+#name{font-size:20px; color: rgb(255,255,255)}
+QLabel {color: rgb(255,255,255)}
+#line{background-color: rgb(255,255,255)}
+#category,#autor{font-size:17px; color:rgb(202, 231, 201);}</string>
+   </property>
+   <widget class="QLabel" name="name">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>291</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Название</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="category">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Категория:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="autor">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>66</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Автор:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="category_name">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>42</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="autor_name">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>70</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>33</y>
+      <width>260</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#line{
+background-color: rgb(255,255,255);
+border:none
+}</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

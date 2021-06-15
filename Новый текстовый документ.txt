@@ -1,0 +1,51 @@
+#listWidget::item{
+	background: rgba(255, 255, 255,0);
+	border-color: rgba(255, 255, 255,0);
+	outline: rgba(255, 255, 255,0);
+	color: transparent;
+	alternate-background-color: rgba(255, 255, 255,0);
+	selection-color: rgba(255, 255, 255, 0);
+	selection-background-color: rgba(255, 255, 255, 0);
+
+}
+#listWidget::item::hover {
+	background: rgba(255, 255, 255,0);
+	border-color: rgba(255, 255, 255,0);
+	alternate-background-color: rgba(255, 255, 255,0);
+	selection-color: rgba(255, 255, 255, 0);
+	selection-background-color: rgba(255, 255, 255, 0);
+	outline: rgba(255, 255, 255,0);
+}
+#listWidget::item::pressed {
+	background: rgba(255, 255, 255,0);
+	border-color: rgba(255, 255, 255,0);
+	alternate-background-color: rgba(255, 255, 255,0);
+	selection-color: rgba(255, 255, 255, 0);
+	selection-background-color: rgba(255, 255, 255, 0);
+	outline: rgba(255, 255, 255,0);
+}
+#listWidget::item::selected {
+	background: rgba(255, 255, 255,0);
+	border-color: rgba(255, 255, 255,0);
+	selection-color: rgba(255, 255, 255, 0);
+	selection-background-color: rgba(255, 255, 255, 0);
+	outline:transparent;
+}
+#listWidget::item::focus {
+	background: rgba(255, 255, 255,0);
+	border-color: rgba(255, 255, 255,0);
+	selection-color: rgba(255, 255, 255, 0);
+	selection-background-color: rgba(255, 255, 255, 0);
+	outline: rgba(255, 255, 255,0);
+}
+#listWidget::item::focus::selected {
+	background:transparent;
+	border-color:transparent;
+	outline:transparent;
+}
+
+#listWidget::item::selected::focus {
+	background:transparent;
+	border:0px;
+	outline:0px;
+}

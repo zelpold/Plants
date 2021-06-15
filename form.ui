@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Application</class>
+ <widget class="QMainWindow" name="Application">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1032</width>
+    <height>648</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Растения</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">#centralwidget {
+    background-image: url(back.jpg);
+	
+}
+QListView{
+	background-color:transparent;
+	border:none;
+outline: 0;
+	color: transparent;
+}
+
+QListView::item{
+	background-color: rgba(0, 0, 0, 0.5);
+	border:1px;
+	border-color: rgba(0, 0, 0, 0.5);
+outline: 0;
+}
+
+QListView::item::hover {
+	background-color:rgba(0, 170, 0, 0.5);
+	border:1px;
+	border-color: rgba(0, 0, 0, 0.5);
+outline: 0;
+}
+QListView::item::pressed {
+	background-color:rgba(0, 170, 127,0.8);
+	border:1px;
+	border-color: rgba(0, 0, 0, 0.5);
+
+}
+QListView::item::selected {
+	background-color:rgba(0, 170, 127,0.8);
+	border:1px;
+	border-color: rgba(0, 0, 0, 0.5);
+	outline: 0;
+}
+QListView::item::focus {
+	background-color:rgba(0, 170, 127,0.8);
+	border:1px;
+	border-color: rgba(0, 0, 0, 0.5);
+outline: 0;
+}
+
+#listWidget::item::pressed, #listWidget::item::selected{
+	color: transparent;
+
+}
+
+#scrollArea{
+	background-color: rgba(0,0,0,0.5);
+	border:none;
+}
+#scrollAreaWidgetContents{
+	background-color: rgba(0,0,0,0.5);
+}
+
+#listWidget{
+	background-color: transparent;
+	border:none
+}
+
+QScrollBar::Vertical{
+	background-color:rgba(85, 170, 127, 0.4);
+	border:none;
+	width:10px;
+	
+	
+}
+QScrollBar::handle::Vertical{
+	background-color: rgba(131, 255, 112, 0.8);
+	height:100px;
+	min-height: 50px;
+	
+	
+}
+QScrollBar::add-line::vertical{
+	border:none;
+	background:none;
+}
+QScrollBar::sub-line::vertical{
+	border:none;
+	background:none;
+}
+
+QScrollBar::handle::Vertical::hover{
+	background-color:rgba(0, 170, 0, 1);
+}
+QScrollBar::handle::Vertical::pressed{
+	background-color:rgba(0, 170, 127,0.8);
+	border:1px ;
+}
+
+QScrollBar::add-Page::vertical,QScrollBar::sub-Page::vertical{
+	background:none;
+}
+QScrollBar::up-arrow::vertical,QScrollBar::down-arrow::vertical{
+	background:none;
+}
+QLabel{
+	color: rgb(255, 255, 255);
+}
+QPushButton{
+	background-color:rgba(0, 170, 0, 0.5);
+	border:none;
+	color: white;
+}
+QPushButton::hover{
+	background-color: rgba(131, 255, 112, 0.5);
+	border:none;
+	color: white;
+}
+QPushButton::pressed{
+	background-color:rgba(0, 170, 127,1);
+	border:none;
+	color: white;
+}
+</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>220</height>
+         </size>
+        </property>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>111</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Название</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="name_input">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>113</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>50</y>
+           <width>111</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Автор</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="autor_input">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>70</y>
+           <width>111</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>100</y>
+           <width>111</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Категория</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="category_input">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>120</y>
+           <width>111</width>
+           <height>22</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="search_button">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>160</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Поиск</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>200</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="editButton">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>240</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Редактировать</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="listWidget">
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>300</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>400</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="lineWidth">
+         <number>0</number>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOn</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="verticalScrollMode">
+         <enum>QAbstractItemView::ScrollPerPixel</enum>
+        </property>
+        <property name="isWrapping" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="resizeMode">
+         <enum>QListView::Fixed</enum>
+        </property>
+        <property name="layoutMode">
+         <enum>QListView::Batched</enum>
+        </property>
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="viewMode">
+         <enum>QListView::ListMode</enum>
+        </property>
+        <property name="uniformItemSizes">
+         <bool>true</bool>
+        </property>
+        <property name="itemAlignment">
+         <set>Qt::AlignTop</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="minimumSize">
+         <size>
+          <width>450</width>
+          <height>300</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>450</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>450</width>
+           <height>624</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
