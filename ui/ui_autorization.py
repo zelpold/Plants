@@ -83,6 +83,7 @@ class Ui_Dialog(object):
         self.password_input = QLineEdit(Dialog)
         self.password_input.setObjectName(u"password_input")
         self.password_input.setFrame(True)
+        self.password_input.setEchoMode(QLineEdit.Password)
 
         self.horizontalLayout_3.addWidget(self.password_input)
 
