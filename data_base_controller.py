@@ -1,12 +1,13 @@
 import pymysql
+from config import bd_info
 
 
 class DataBaseController:
     def __init__(self):
         try:
-            self.connection = pymysql.connect(host="217.28.221.3", port=3306,
-                                              user="leonid", password="Leopoya00*",
-                                              db='plants')
+            self.connection = pymysql.connect(host=bd_info["host"], port=3306,
+                                              user=bd_info["user"], password=bd_info["password"],
+                                              db=bd_info["db"])
             self.cursor = self.connection.cursor()
             self.connection.close()
         except pymysql.Error as e:
@@ -121,9 +122,9 @@ class DataBaseController:
         self.connection.close()
 
     def connect_database(self):
-        self.connection = pymysql.connect(host="217.28.221.3", port=3306,
-                                          user="leonid", password="Leopoya00*",
-                                          db='plants', autocommit=True)
+        self.connection = pymysql.connect(host=bd_info["host"], port=3306,
+                                          user=bd_info["user"], password=bd_info["password"],
+                                          db=bd_info["db"], autocommit=True)
         self.cursor = self.connection.cursor()
 
     def connect_close(self):

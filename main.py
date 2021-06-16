@@ -1,25 +1,12 @@
 import sys
-
-from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QDialog
-
+from PySide6.QtWidgets import QApplication, QMainWindow, QDialog
 from error_message import MyError
 from ui.uimainwindow import Ui_Application
-from ui.ui_plantfrom import Ui_Form
 from cur_plant import CurPlant
 from autorization import Autorization
 from edit_mode import EditMode
 from utility import remove_spaces, fill_plants
 from data_base_controller import DataBaseController
-
-
-class PlantInform(QWidget):
-    def __init__(self, plant_feature):
-        super(PlantInform, self).__init__()
-        self.ui = Ui_Form()
-        self.ui.setupUi(self)
-        self.ui.name.setText(plant_feature[1])
-        self.ui.category_name.setText(plant_feature[2])
-        self.ui.autor_name.setText(plant_feature[3])
 
 
 class Application(QMainWindow):
@@ -35,8 +22,8 @@ class Application(QMainWindow):
         plant, insects, sicks, parents, children, fond = self.database.get_cur_plants(plants[0][1])
         self.cur.change_plants(plant, insects, sicks, parents, children, fond)
         self.ui.verticalLayout.addWidget(self.cur)
-        fill_plants(self.ui.listWidget, plants)
-        self.ui.listWidget.itemDoubleClicked.connect(self.change_cur_plant)
+        fill_plants(self.ui.list_plants, plants)
+        self.ui.list_plants.itemDoubleClicked.connect(self.change_cur_plant)
         self.cur.ui.list_parent.itemDoubleClicked.connect(self.set_selected_parent)
         self.cur.ui.list_children.itemDoubleClicked.connect(self.set_selected_child)
         self.ui.search_button.clicked.connect(self.search)
@@ -45,7 +32,7 @@ class Application(QMainWindow):
 
     # изменить выбранное растение
     def change_cur_plant(self):
-        name = self.ui.listWidget.currentItem().text()
+        name = self.ui.list_plants.currentItem().text()
         plant, insects, sicks, parents, children, fond = self.database.get_cur_plants(name)
         self.cur.change_plants(plant, insects, sicks, parents, children, fond)
 
@@ -66,8 +53,6 @@ class Application(QMainWindow):
         allowing_access = autorization_window.exec()
         if allowing_access == QDialog.Accepted:
             self.edit_window.show()
-        else:
-            print('отмена')
 
     # поиск
     def search(self):
@@ -85,7 +70,7 @@ class Application(QMainWindow):
         else:
             plants = self.database.get_plants(name=name, category=category, autor=autor)
             if plants:
-                fill_plants(self.ui.listWidget, plants)
+                fill_plants(self.ui.list_plants, plants)
             else:
                 my_error = MyError()
                 my_error.set_message("По вашему запросу ничего не найдено!")
@@ -93,7 +78,7 @@ class Application(QMainWindow):
 
     def update_data(self):
         plants = self.database.get_plants()
-        fill_plants(self.ui.listWidget, plants)
+        fill_plants(self.ui.list_plants, plants)
         plant, insects, sicks, parents, children, fond = self.database.get_cur_plants(plants[0][1])
         self.cur.change_plants(plant, insects, sicks, parents, children, fond)
 

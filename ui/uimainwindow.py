@@ -64,9 +64,9 @@ class Ui_Application(object):
 "outline: 0;\n"
 "}\n"
 "\n"
-"#listWidget::item::pressed, #listWidget::item::selected{\n"
-"	color: transpar"
-                        "ent;\n"
+"#list_plants::item::pressed, #list_plants::item::selected{\n"
+"	color: transp"
+                        "arent;\n"
 "\n"
 "}\n"
 "\n"
@@ -78,7 +78,7 @@ class Ui_Application(object):
 "	background-color: rgba(0,0,0,0.5);\n"
 "}\n"
 "\n"
-"#listWidget{\n"
+"#list_plants{\n"
 "	background-color: transparent;\n"
 "	border:none\n"
 "}\n"
@@ -117,8 +117,8 @@ class Ui_Application(object):
 "QScrollBar::add-Page::vertical,QScrollBar::sub-Page::vertical{\n"
 "	background:none;\n"
 "}\n"
-"QScrollBar::up-ar"
-                        "row::vertical,QScrollBar::down-arrow::vertical{\n"
+"QScrollBar::up"
+                        "-arrow::vertical,QScrollBar::down-arrow::vertical{\n"
 "	background:none;\n"
 "}\n"
 "QLabel{\n"
@@ -181,25 +181,25 @@ class Ui_Application(object):
 
         self.horizontalLayout_2.addWidget(self.widget)
 
-        self.listWidget = QListWidget(self.centralwidget)
-        self.listWidget.setObjectName(u"listWidget")
-        self.listWidget.setMinimumSize(QSize(400, 300))
-        self.listWidget.setMaximumSize(QSize(400, 16777215))
-        self.listWidget.setStyleSheet(u"")
-        self.listWidget.setFrameShape(QFrame.NoFrame)
-        self.listWidget.setLineWidth(0)
-        self.listWidget.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
-        self.listWidget.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.listWidget.setVerticalScrollMode(QAbstractItemView.ScrollPerPixel)
-        self.listWidget.setProperty("isWrapping", False)
-        self.listWidget.setResizeMode(QListView.Fixed)
-        self.listWidget.setLayoutMode(QListView.Batched)
-        self.listWidget.setSpacing(2)
-        self.listWidget.setViewMode(QListView.ListMode)
-        self.listWidget.setUniformItemSizes(True)
-        self.listWidget.setItemAlignment(Qt.AlignTop)
+        self.list_plants = QListWidget(self.centralwidget)
+        self.list_plants.setObjectName(u"list_plants")
+        self.list_plants.setMinimumSize(QSize(400, 300))
+        self.list_plants.setMaximumSize(QSize(400, 16777215))
+        self.list_plants.setStyleSheet(u"")
+        self.list_plants.setFrameShape(QFrame.NoFrame)
+        self.list_plants.setLineWidth(0)
+        self.list_plants.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.list_plants.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.list_plants.setVerticalScrollMode(QAbstractItemView.ScrollPerPixel)
+        self.list_plants.setProperty("isWrapping", False)
+        self.list_plants.setResizeMode(QListView.Fixed)
+        self.list_plants.setLayoutMode(QListView.Batched)
+        self.list_plants.setSpacing(2)
+        self.list_plants.setViewMode(QListView.ListMode)
+        self.list_plants.setUniformItemSizes(True)
+        self.list_plants.setItemAlignment(Qt.AlignTop)
 
-        self.horizontalLayout_2.addWidget(self.listWidget)
+        self.horizontalLayout_2.addWidget(self.list_plants)
 
         self.scrollArea = QScrollArea(self.centralwidget)
         self.scrollArea.setObjectName(u"scrollArea")

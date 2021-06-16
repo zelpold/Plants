@@ -59,7 +59,7 @@ QListView::item::focus {
 outline: 0;
 }
 
-#listWidget::item::pressed, #listWidget::item::selected{
+#list_plants::item::pressed, #list_plants::item::selected{
 	color: transparent;
 
 }
@@ -263,7 +263,7 @@ QPushButton::pressed{
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QListWidget" name="listWidget">
+           <widget class="QListWidget" name="list_plants">
             <property name="minimumSize">
              <size>
               <width>400</width>

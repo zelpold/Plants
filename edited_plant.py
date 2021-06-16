@@ -21,6 +21,10 @@ class EditPlant(QDialog):
         self.ui.delete_insect_button.clicked.connect(self.delete_insect)
         self.ui.delete_sick_button.clicked.connect(self.delete_sick)
         self.ui.delete_fond_button.clicked.connect(self.delete_fond)
+        self.ui.exit_button.clicked.connect(self.exit_click)
+
+    def exit_click(self):
+        self.reject()
 
     def set_plant(self, name):
         plant, insects, sicks, parents, children, fond = self.database.get_cur_plants(name)

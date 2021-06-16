@@ -6,14 +6,13 @@ from edited_plant import EditPlant
 
 
 class EditMode(QWidget):
-
     def __init__(self, database):
         super(EditMode, self).__init__()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.database = database
         plants = self.database.get_plants()
-        fill_plants(self.ui.listWidget, plants)
+        fill_plants(self.ui.list_plants, plants)
         self.ui.search_button.clicked.connect(self.search)
         self.ui.edit_button.clicked.connect(self.edit_cur)
         self.ui.add_button.clicked.connect(self.add_plant)
@@ -23,22 +22,21 @@ class EditMode(QWidget):
         cur_plant = EditPlant(self.database)
         if cur_plant.exec():
             plants = self.database.get_plants()
-            fill_plants(self.ui.listWidget, plants)
+            fill_plants(self.ui.list_plants, plants)
 
     def edit_cur(self):
         cur_plant = EditPlant(self.database)
-        cur_plant.set_plant(self.ui.listWidget.currentItem().text())
+        cur_plant.set_plant(self.ui.list_plants.currentItem().text())
         if cur_plant.exec():
             plants = self.database.get_plants()
-            fill_plants(self.ui.listWidget, plants)
+            fill_plants(self.ui.list_plants, plants)
 
     def delete_plant(self):
-        text = self.ui.listWidget.currentItem().text()
+        text = self.ui.list_plants.currentItem().text()
         if text:
             self.database.delete_plant(text)
             plants = self.database.get_plants()
-            fill_plants(self.ui.listWidget, plants)
-
+            fill_plants(self.ui.list_plants, plants)
 
     def search(self):
         name = remove_spaces(self.ui.name_input.text())
@@ -48,7 +46,6 @@ class EditMode(QWidget):
         self.ui.category_input.setText(category)
         self.ui.autor_input.setText(autor)
 
-
         if (name == "" or name == " ") and (category == "" or category == " ") and (autor == "" or autor == " "):
             my_error = MyError()
             my_error.set_message("Все поля пустые!")
@@ -57,7 +54,7 @@ class EditMode(QWidget):
         else:
             plants = self.database.get_plants(name=name, category=category, autor=autor)
             if plants:
-                fill_plants(self.ui.listWidget, plants)
+                fill_plants(self.ui.list_plants, plants)
             else:
                 my_error = MyError()
                 my_error.set_message("По вашему запросу ничего не найдено!")
