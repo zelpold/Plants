@@ -41,6 +41,7 @@ class Application(QMainWindow):
         self.cur.ui.list_children.itemDoubleClicked.connect(self.set_selected_child)
         self.ui.search_button.clicked.connect(self.search)
         self.ui.edit_button.clicked.connect(self.autorization)
+        self.ui.update_button.clicked.connect(self.update_data)
 
     # изменить выбранное растение
     def change_cur_plant(self):
