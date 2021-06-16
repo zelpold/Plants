@@ -172,12 +172,12 @@ class Ui_Application(object):
         self.search_button = QPushButton(self.widget)
         self.search_button.setObjectName(u"search_button")
         self.search_button.setGeometry(QRect(0, 160, 111, 31))
-        self.pushButton = QPushButton(self.widget)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(0, 200, 111, 31))
-        self.editButton = QPushButton(self.widget)
-        self.editButton.setObjectName(u"editButton")
-        self.editButton.setGeometry(QRect(0, 240, 111, 31))
+        self.update_button = QPushButton(self.widget)
+        self.update_button.setObjectName(u"update_button")
+        self.update_button.setGeometry(QRect(0, 200, 111, 31))
+        self.edit_button = QPushButton(self.widget)
+        self.edit_button.setObjectName(u"edit_button")
+        self.edit_button.setGeometry(QRect(0, 240, 111, 31))
 
         self.horizontalLayout_2.addWidget(self.widget)
 
@@ -242,7 +242,7 @@ class Ui_Application(object):
         self.label_2.setText(QCoreApplication.translate("Application", u"\u0410\u0432\u0442\u043e\u0440", None))
         self.label_4.setText(QCoreApplication.translate("Application", u"\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f", None))
         self.search_button.setText(QCoreApplication.translate("Application", u"\u041f\u043e\u0438\u0441\u043a", None))
-        self.pushButton.setText(QCoreApplication.translate("Application", u"PushButton", None))
-        self.editButton.setText(QCoreApplication.translate("Application", u"\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c", None))
+        self.update_button.setText(QCoreApplication.translate("Application", u"\u041e\u0431\u043d\u043e\u0432\u0438\u0442\u044c", None))
+        self.edit_button.setText(QCoreApplication.translate("Application", u"\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c", None))
     # retranslateUi
 

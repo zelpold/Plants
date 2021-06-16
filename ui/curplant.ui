@@ -94,7 +94,7 @@ QScrollBar::up-arrow::vertical,QScrollBar::down-arrow::vertical{
      <rect>
       <x>20</x>
       <y>0</y>
-      <width>151</width>
+      <width>401</width>
       <height>51</height>
      </rect>
     </property>
@@ -112,8 +112,7 @@ QScrollBar::up-arrow::vertical,QScrollBar::down-arrow::vertical{
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">
-</string>
+     <string notr="true"/>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>

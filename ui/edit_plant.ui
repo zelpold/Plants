@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>808</width>
+    <height>647</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#widget{background-image:url(back3.jpg);}
+QLabel{font-size:17px; color:rgb(202, 231, 201);}
+QListWidget{
+	background-color: transparent;
+	border: none;
+	color: rgb(255,255,255);
+}
+
+
+QScrollBar::Vertical{
+	background-color:rgba(85, 170, 127, 0.4);
+	border:none;
+	width:10px;
+
+	
+}
+QScrollBar::handle::Vertical{
+	background-color: rgba(131, 255, 112, 0.8);
+	height:100px;
+	min-height: 50px;
+}
+QScrollBar::add-line::vertical{
+	border:none;
+	background:none;
+}
+QScrollBar::sub-line::vertical{
+	border:none;
+	background:none;
+}
+
+QScrollBar::handle::Vertical::hover{
+	background-color:rgba(0, 170, 0, 1);
+}
+QScrollBar::handle::Vertical::pressed{
+	background-color:rgba(0, 170, 127,0.8);
+}
+
+QScrollBar::add-Page::vertical,QScrollBar::sub-Page::vertical{
+	background:none;
+}
+QScrollBar::up-arrow::vertical,QScrollBar::down-arrow::vertical{
+	background:none;
+}
+QPushButton{
+	background-color:rgba(0, 170, 0, 0.5);
+	border:none;
+	color: white;
+}
+QPushButton::hover{
+	background-color: rgba(131, 255, 112, 0.5);
+	border:none;
+	color: white;
+}
+QPushButton::pressed{
+	background-color:rgba(0, 170, 127,1);
+	border:none;
+	color: white;
+}</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="3">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Категория</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Автор</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="6">
+           <widget class="QPushButton" name="add_sick_button">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLineEdit" name="category_input"/>
+          </item>
+          <item row="12" column="0">
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>Родительские сорта</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="3" colspan="2">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>характеристики плода</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1" colspan="3">
+           <widget class="QListWidget" name="list_insects">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>100</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="5" colspan="3">
+           <widget class="QListWidget" name="list_sicks">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>100</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="1" colspan="3">
+           <widget class="QListWidget" name="list_parents">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>100</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="7">
+           <widget class="QPushButton" name="delete_child_button">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>удалить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Название </string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+            </property>
+           </widget>
+          </item>
+          <item row="18" column="3">
+           <widget class="QPushButton" name="delete_fond_button">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>удалить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" colspan="8">
+           <widget class="Line" name="line_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="4" colspan="2">
+           <widget class="QLineEdit" name="sick_input"/>
+          </item>
+          <item row="8" column="2">
+           <widget class="QPushButton" name="add_insect_button">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="16" column="1" colspan="3">
+           <widget class="QListWidget" name="list_foundations"/>
+          </item>
+          <item row="8" column="7">
+           <widget class="QPushButton" name="delete_sick_button">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>удалить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0" colspan="2">
+           <widget class="QLineEdit" name="insect_input"/>
+          </item>
+          <item row="8" column="3">
+           <widget class="QPushButton" name="delete_insect_button">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>удалить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0" colspan="8">
+           <widget class="Line" name="line_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1" colspan="2">
+           <widget class="QLineEdit" name="fruit_input"/>
+          </item>
+          <item row="5" column="5" colspan="3">
+           <widget class="QLineEdit" name="fruit_feature_input"/>
+          </item>
+          <item row="13" column="3">
+           <widget class="QPushButton" name="delete_parent_button">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>удалить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="0" colspan="2">
+           <widget class="QLineEdit" name="parent_input"/>
+          </item>
+          <item row="18" column="2">
+           <widget class="QPushButton" name="add_fond_button">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="4">
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Болезни</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Морозоустойчивость</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0" colspan="8">
+           <widget class="Line" name="line_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Вредители</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+            </property>
+           </widget>
+          </item>
+          <item row="16" column="0">
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>наличие в селекционных фондах</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="2">
+           <widget class="QPushButton" name="add_parent_button">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" colspan="2">
+           <widget class="QLineEdit" name="frost_resistance_input"/>
+          </item>
+          <item row="18" column="0" colspan="2">
+           <widget class="QLineEdit" name="fond_input"/>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Плод</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0" colspan="8">
+           <widget class="Line" name="line">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="4" colspan="2">
+           <widget class="QLineEdit" name="child_input"/>
+          </item>
+          <item row="12" column="5" colspan="3">
+           <widget class="QListWidget" name="list_children"/>
+          </item>
+          <item row="13" column="6">
+           <widget class="QPushButton" name="add_child_button">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="2">
+           <widget class="QLineEdit" name="name_input"/>
+          </item>
+          <item row="12" column="4">
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>Дочерние сорта</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0" colspan="8">
+           <widget class="Line" name="line_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="6">
+           <widget class="QLineEdit" name="autor_input"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="save_button">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>сохранить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="exit_button">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>отмена</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

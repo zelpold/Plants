@@ -242,7 +242,7 @@ QPushButton::pressed{
           <string>Поиск</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="update_button">
          <property name="geometry">
           <rect>
            <x>0</x>
@@ -252,10 +252,10 @@ QPushButton::pressed{
           </rect>
          </property>
          <property name="text">
-          <string>PushButton</string>
+          <string>Обновить</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="editButton">
+        <widget class="QPushButton" name="edit_button">
          <property name="geometry">
           <rect>
            <x>0</x>

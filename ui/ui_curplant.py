@@ -77,7 +77,7 @@ class Ui_Form(object):
 "}")
         self.name = QLabel(self.widget)
         self.name.setObjectName(u"name")
-        self.name.setGeometry(QRect(20, 0, 151, 51))
+        self.name.setGeometry(QRect(20, 0, 401, 51))
         self.line = QFrame(self.widget)
         self.line.setObjectName(u"line")
         self.line.setGeometry(QRect(20, 40, 401, 2))

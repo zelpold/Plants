@@ -56,6 +56,8 @@ class Ui_Dialog(object):
         self.label.setFont(font)
         self.label.setLayoutDirection(Qt.LeftToRight)
         self.label.setStyleSheet(u"")
+        self.label.setAlignment(Qt.AlignCenter)
+        self.label.setWordWrap(True)
 
         self.horizontalLayout_2.addWidget(self.label)
 
