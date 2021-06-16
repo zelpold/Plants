@@ -17,8 +17,8 @@ class Autorization(QDialog):
 
     def chek_user(self):
         login = remove_spaces(self.ui.login_input.text())
-        password = remove_spaces(self.ui.password_input.text())
-        if password == " " or password == "" or login == " " or login == "":
+        password = self.ui.password_input.text()
+        if password == "" or login == " " or login == "":
             my_error = MyError()
             my_error.set_message("Заполните все поля!")
             my_error.exec()

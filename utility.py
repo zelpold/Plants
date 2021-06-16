@@ -3,6 +3,7 @@ from PySide6.QtWidgets import QListWidgetItem
 from plantinform import PlantInform
 from error_message import MyError
 
+
 def fill_list(list_items, items):
     for i in items:
         item = QListWidgetItem(list_items)
@@ -14,6 +15,7 @@ def fill_none(list_items):
     item = QListWidgetItem(list_items)
     item.setText("нет")
     list_items.addItem(item)
+
 
 def add_to_list(list_items, text):
     if text == "" or text == " ":
@@ -33,6 +35,7 @@ def delete_from_list(list_item):
         error_message = MyError()
         error_message.set_message("Не выбран элемент списка!")
         error_message.exec()
+
 
 def remove_spaces(string: str):
     if len(string) <= 1:
